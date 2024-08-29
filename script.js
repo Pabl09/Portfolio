@@ -40,7 +40,30 @@ window.onscroll = function(){
     efectoHabilidades();
 } 
 
+// Funcion para visualizar y descargar CV en formato PDF
 document.getElementById('download-btn').addEventListener('click', function() {
     var url = 'https://drive.google.com/file/d/1eCroWPYokCSTBeV4oMJoYL3oweIq8Tnj/view?usp=sharing';
     window.open(url, '_blank');
 });
+
+// Funcionalidad del formulario. 
+
+const form = document.getElementById('form')
+const sendMail = document.getElementById('emailA')
+
+function handleSendEmail(event){
+    event.preventDefault()
+    const fd = new FormData(this)
+
+    sendMail.setAttribute(
+        'href',
+        `mailTo:munozjuanpablo424@gmail.com?subject=${fd.get('subject')}&body=${fd.get('mensaje')}`
+    )
+
+     // Limpiar el formulario
+     form.reset();
+
+    sendMail.click()
+}
+
+form.addEventListener('submit', handleSendEmail)
