@@ -39,3 +39,8 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+document.getElementById('download-btn').addEventListener('click', function() {
+    var url = 'https://drive.google.com/file/d/1eCroWPYokCSTBeV4oMJoYL3oweIq8Tnj/view?usp=sharing';
+    window.open(url, '_blank');
+});
