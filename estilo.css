@@ -9,6 +9,10 @@ html{
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
 /* MENU */
 .contenedor-header{
     background: #1e2326;
@@ -647,14 +651,23 @@ footer .arriba{
     font-size: 18px;
 }
 /* SECCION RESPONSIVE */
-@media screen and (max-width:980px){
-    nav{
+
+/* Estilos generales */
+.sobremi p, .curriculum p {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 0 15px; /* Márgenes para darle espacio al texto */
+}
+
+/* Responsividad para pantallas medianas */
+@media screen and (max-width: 1284px) {
+    nav {
         display: none;
     }
-    .nav-responsive{
+    .nav-responsive {
         display: block;
     }
-    nav.responsive{
+    nav.responsive {
         display: block;
         position: absolute;
         right: 0;
@@ -662,56 +675,77 @@ footer .arriba{
         background-color: #252A2E;
         width: 180px;
     }
-    nav.responsive ul{
+    nav.responsive ul {
         display: block !important;
     }
-    nav.responsive ul li{
+    nav.responsive ul li {
         border-bottom: 1px solid #fff;
         padding: 10px 0;
     }
+
+    .sobremi p, .curriculum p {
+        margin: 0 10px;
+        font-size: 18px;
+        line-height: 1.8;
+    }
 }
-@media screen and (max-width:700px){
-    .sobremi .fila{
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .nav-responsive {
         display: block;
     }
-    .sobremi .fila .col{
-        width: fit-content;
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul {
+        display: block !important;
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
     }
 
-    .skills .fila{
+    .sobremi .fila, .curriculum .fila {
         display: block;
-    }
-    .skills .fila .col{
         width: 100%;
+        margin: 0 auto;
     }
-    .skills .fila .col .barra-skill{
+    
+    .sobremi .fila .col, .curriculum .fila .col {
         width: 100%;
+        padding: 0 10px;
+    }
+    
+    .sobremi p, .curriculum p {
+        font-size: 16px;
+        margin: 0 5px;
+        line-height: 1.8;
     }
 
-    .curriculum .fila{
-        display: block;
-    }
-    .curriculum .fila .col{
-        width: 90%;
-    }
-    .curriculum .fila .derecha{
-        margin-left: 20px;
-    }
-
-    .portfolio .galeria{
+    .skills .fila, .portfolio .galeria, .contacto .fila {
         display: block;
         width: 100%;
     }
-    .portfolio .galeria .proyecto{
-        max-width: 100%;
-    }
-    .portfolio .galeria .proyecto img{
+    
+    .portfolio .galeria .proyecto, .contacto .fila .col {
         width: 100%;
     }
-    .contacto .fila{
-        display: block;
-    }
-    .contacto .fila .col{
+    
+    .portfolio .galeria .proyecto img {
         width: 100%;
+        height: auto;
+    }
+    
+    .contacto .fila .col {
+        margin-bottom: 70px;
     }
 }
