@@ -21,16 +21,16 @@ function efectoHabilidades(){
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
     if(distancia_skills >= 300){
         let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
+        habilidades[0].classList.add("AndroidStudio");
         habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+        habilidades[2].classList.add("Database");
+        habilidades[3].classList.add("React");
+        habilidades[4].classList.add("comunicacion");
+        habilidades[5].classList.add("trabajo");
+        habilidades[6].classList.add("creatividad");
+        habilidades[7].classList.add("dedicacion");
+        habilidades[8].classList.add("proyect");
+        habilidades[9].classList.add("Figma");
     }
 }
 
@@ -42,7 +42,7 @@ window.onscroll = function(){
 
 // Funcion para visualizar y descargar CV en formato PDF
 document.getElementById('download-btn').addEventListener('click', function() {
-    var url = 'https://drive.google.com/file/d/1eCroWPYokCSTBeV4oMJoYL3oweIq8Tnj/view?usp=sharing';
+    var url = 'https://drive.google.com/file/d/1y5zof6-df35xgKt5XeaxB98f5uGZh-HP/view?usp=sharing';
     window.open(url, '_blank');
 });
 
@@ -57,7 +57,7 @@ function handleSendEmail(event){
 
     sendMail.setAttribute(
         'href',
-        `mailTo:munozjuanpablo424@gmail.com?subject=${fd.get('subject')}&body=${fd.get('mensaje')}`
+        `mailTo:jpablo.engineer@gmail.com?subject=${fd.get('subject')}&body=${fd.get('mensaje')}`
     )
 
      // Limpiar el formulario

@@ -273,11 +273,11 @@ p {
     font-size: 14px;
 }
 /* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
+.skills .skill .AndroidStudio{
     width: 0%;
-    animation: 2s javascript forwards;
+    animation: 2s AndroidStudio forwards;
 }
-@keyframes javascript {
+@keyframes AndroidStudio {
     0%{width: 0%;}
     100%{width: 75%;}
 }
@@ -291,31 +291,31 @@ p {
     100%{width: 89%;}
 }
 
-.skills .skill .photoshop{
+.skills .skill .Database{
     width: 0%;
-    animation: 2s photoshop forwards;
+    animation: 2s Database forwards;
 }
-@keyframes photoshop {
+@keyframes Database {
     0%{width: 0%;}
     100%{width: 95%;}
 }
 
-.skills .skill .wordpress{
+.skills .skill .React{
     width: 0%;
-    animation: 2s wordpress forwards;
+    animation: 2s React forwards;
 }
-@keyframes wordpress {
+@keyframes React {
     0%{width: 0%;}
     100%{width: 81%;}
 }
 
-.skills .skill .drupal{
+.skills .skill .Figma{
     width: 0%;
-    animation: 2s drupal forwards;
+    animation: 2s Figma forwards;
 }
-@keyframes drupal {
+@keyframes Figma{
     0%{width: 0%;}
-    100%{width: 55%;}
+    100%{width: 45%;}
 }
 
 .skills .skill .comunicacion{
@@ -597,7 +597,7 @@ p {
     top: 40%;
     background-color: #252A2E;
     padding: 20px;
-    max-swidth: 350px;
+    max-width: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -606,6 +606,8 @@ p {
 }
 .contacto .col .info ul li{
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 .contacto .col .info ul li i{
     color: #1CB698;
