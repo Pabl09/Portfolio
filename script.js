@@ -67,3 +67,25 @@ function handleSendEmail(event){
 }
 
 form.addEventListener('submit', handleSendEmail)
+
+//Script para Controlar el Deslizamiento de la sección certificaciones
+
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index >= slides.length) currentIndex = 0;
+    if (index < 0) currentIndex = slides.length - 1;
+    document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function changeSlide(step) {
+    currentIndex += step;
+    showSlide(currentIndex);
+}
+
+// Desplazamiento automático cada 5 segundos
+setInterval(() => {
+    currentIndex++;
+    showSlide(currentIndex);
+}, 5000);

@@ -468,9 +468,84 @@ p {
     position: relative;
     bottom: 4px;
 }
+/* Sección Certificaciones */
+.certificaciones{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+/* Centrar el título "Certificaciones" */
+.certificaciones h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Contenedor del slider */
+.certificaciones .slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: transparent; /* Elimina cualquier fondo blanco */
+    border-radius: 10px;
+}
+
+/* Slider para las certificaciones */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Cada slide con ajustes adicionales */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo para evitar que se vea borroso */
+    height: auto;
+    object-fit: cover; /* Rellena el contenedor sin distorsión */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    background-color: transparent; /* Asegura que no haya fondo blanco */
+}
+
+/* Información de la certificación */
+.info {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #f8f7f7;
+}
+
+/* Botones de navegación */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
 /* SECCION PORTFOLIO */
 .portfolio{
-    background-color: #252A2E;
+    background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
@@ -531,7 +606,7 @@ p {
 /* SECCION CONTACTO */
 .contacto{
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
+    background-color:  #252A2E;
     color: #fff;
     padding: 50px 0;
 }
@@ -559,7 +634,7 @@ p {
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
+    background-color: #1e2326;
     color: #fff;
     font-size: 18px;
 }
@@ -595,7 +670,7 @@ p {
 .contacto .col .info{
     position: absolute;
     top: 40%;
-    background-color: #252A2E;
+    background-color: #1e2326;
     padding: 20px;
     max-width: 350px;
     left: 50%;
@@ -615,7 +690,7 @@ p {
     margin-right: 20px;
 }
 footer{
-    background-color: #252A2E;
+    background-color: #1e2326;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
