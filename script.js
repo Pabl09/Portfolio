@@ -15,30 +15,6 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("AndroidStudio");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("Database");
-        habilidades[3].classList.add("React");
-        habilidades[4].classList.add("Figma");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
-    }
-}
-
-
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
 
 // Funcion para visualizar y descargar CV en formato PDF
 document.getElementById('download-btn').addEventListener('click', function() {
@@ -67,3 +43,25 @@ function handleSendEmail(event){
 }
 
 form.addEventListener('submit', handleSendEmail)
+
+//Script para Controlar el Deslizamiento de la sección certificaciones
+
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index >= slides.length) currentIndex = 0;
+    if (index < 0) currentIndex = slides.length - 1;
+    document.querySelector('.slider').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function changeSlide(step) {
+    currentIndex += step;
+    showSlide(currentIndex);
+}
+
+// Desplazamiento automático cada 5 segundos
+setInterval(() => {
+    currentIndex++;
+    showSlide(currentIndex);
+}, 5000);

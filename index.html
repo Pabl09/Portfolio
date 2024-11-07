@@ -13,15 +13,16 @@
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="#">PORTFOLIO</a>
+                <a>PORTFOLIO</a>
             </div>
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
-                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">HABILIDADES</a></li>
                     <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#certificaciones" onclick="seleccionar()">CERTIFICACIONES</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PROYECTOS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -126,94 +127,54 @@
     <!-- SECCION SKILLS -->
     <section class="skills" id="skills">
         <div class="contenido-seccion">
-            <h2>Skills</h2>
+            <h2>Habilidades</h2>
             <div class="fila">
-                <!-- Technical Skill -->
+                <!-- Technical Skill Cards -->
                 <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
+                    <h3>Habilidades Técnicas</h3>
+                    <div class="skill-card">
                         <span>Android Studio</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>75%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Intermedio (50%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>HTML & CSS</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>89%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Intermedio (70%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>Database</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>81%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Intermedio (70%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>React.JS</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>55%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Basico (40%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>Figma</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>45%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Básico (40%)</p>
                     </div>
                 </div>
-                <!-- Professional Skills -->
+                <!-- Professional Skill Cards -->
                 <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
+                    <h3>Habilidades Profecionáles</h3>
+                    <div class="skill-card">
                         <span>Comunicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>95%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Avanzado (90%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>Trabajo en Equipo</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>90%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Avanzado (90%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>99%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Intermedio (70%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>85%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Avanzado (90%)</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill-card">
                         <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>50%</span>
-                            </div>
-                        </div>
+                        <p>Nivel: Básico (40%)</p>
                     </div>
                 </div>
             </div>
@@ -240,16 +201,6 @@
                             <div class="circuloi"></div>
                         </div>
                     </div>
-                    <!--<div class="item izq">
-                        <h4>Bachillerato</h4>
-                        <span class="casa">Centro de Estudios de Bachillerato Lic. "Jesus Reyes Heroles" CEB 6/13</span>
-                        <span class="fecha">2016 - 2019</span>
-                        <p>En mi paso por el Centro de Estudios de Bachillerato (CEB 6/13), aproveché la oportunidad para profundizar en materias como 
-                           matemáticas e informática, que me han ayudado a construir una base sólida para mi desarrollo profesional.</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>-->
                 </div>
 
                 <div class="col derecha">
@@ -292,10 +243,49 @@
         </div>
     </section>
 
+    <!-- SECCION CERTIFICACIONES -->
+    <section id="certificaciones" class="certificaciones">
+        <div class="contenido-seccion">
+            <h2>Certificaciones</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <!-- Cada "slide" representa una certificación -->
+                    <div class="slide">
+                        <img src="img/Fundamentos SCRUM.png" alt="Certificación Fundamentos de SCRUM">
+                        <div class="info">
+                            <h4>Fundamentos de SCRUM</h4>
+                            <p>Fecha: Septiembre 2024</p>
+                            <p>Empresa: SoyLider.net</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/GestionProyectos.png" alt="Certificación Gestión de Proyectos">
+                        <div class="info">
+                            <h4>Gestión de Proyectos de Google</h4>
+                            <p>Fecha: Octubre 2024</p>
+                            <p>Empresa: INROADS</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/IA Essentials.png" alt="Certificación Fundamentos de IA">
+                        <div class="info">
+                            <h4>Fundamentos de IA</h4>
+                            <p>Fecha: Octubre 2024</p>
+                            <p>Empresa: INROADS</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles para navegar manualmente -->
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
     <!-- SECCION PORTFOLIO -->
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
+            <h2>Proyectos</h2>
             <div class="galeria">
                 <div class="proyecto">
                     <img src="img/project 1.png" alt="">
@@ -306,7 +296,7 @@
                 <div class="proyecto">
                     <img src="img/project 2.png" alt="">
                     <div class="overlay">
-                        <h3>Diseño Blog WebSite</h3>
+                        <h3>Demo de un Blog WebSite</h3>
                     </div>
                 </div>
             </div>
@@ -316,7 +306,7 @@
     <!-- SECCION CONTACTO -->
     <section id="contacto" class="contacto">
         <div class="contenido-seccion">
-            <h2>CONTACTO</h2>
+            <h2>Contacto</h2>
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">

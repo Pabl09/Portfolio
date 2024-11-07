@@ -23,7 +23,7 @@ p {
     z-index: 99;
 }
 .contenedor-header header{
-    max-width: 1100px;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -212,155 +212,65 @@ p {
 .sobremi button:hover .overlay{
     width: 100%;
 }
-/* SECCION S K I L L S */
-.skills{
+/* SECCION SKILLS */
+.skills {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.skills .contenido-seccion{
+
+.skills .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
-.skills h2{
+
+.skills h2 {
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
-
 }
-.skills .fila{
+
+.skills .fila {
     display: flex;
 }
-.skills .fila .col{
+
+.skills .fila .col {
     width: 50%;
     padding: 0 20px;
 }
-.skills .fila .col h3{
+
+.skills .fila .col h3 {
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.skills .skill > span{
+
+/* Estilo para las tarjetas de habilidades */
+.skills .skill-card {
+    background-color: #1C1F22;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.skills .skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skills .skill-card span {
     font-weight: bold;
+    font-size: 18px;
+    color: #1CB698;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
-.skills .skill .barra-skill{
-    height: 8px;
-    width: 80%;
-    background-color: #131517;
-    position: relative;
-    margin-bottom: 30px;
-}
-.skills .skill .progreso{
-    background-color: #1CB698;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 8px;
-}
-.skills .skill .barra-skill span{
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background-color: #1CB698;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    top: -17px;
-    right: -15px;
+
+.skills .skill-card p {
     font-size: 14px;
-}
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .AndroidStudio{
-    width: 0%;
-    animation: 2s AndroidStudio forwards;
-}
-@keyframes AndroidStudio {
-    0%{width: 0%;}
-    100%{width: 75%;}
-}
-
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .Database{
-    width: 0%;
-    animation: 2s Database forwards;
-}
-@keyframes Database {
-    0%{width: 0%;}
-    100%{width: 81%;}
-}
-
-.skills .skill .React{
-    width: 0%;
-    animation: 2s React forwards;
-}
-@keyframes React {
-    0%{width: 0%;}
-    100%{width: 55%;}
-}
-
-.skills .skill .Figma{
-    width: 0%;
-    animation: 2s Figma forwards;
-}
-@keyframes Figma{
-    0%{width: 0%;}
-    100%{width: 45%;}
-}
-
-.skills .skill .comunicacion{
-    width: 0%;
-    animation: 2s comunicacion forwards;
-}
-@keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 95%;}
-}
-
-.skills .skill .trabajo{
-    width: 0%;
-    animation: 2s trabajo forwards;
-}
-@keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
-}
-
-.skills .skill .dedicacion{
-    width: 0%;
-    animation: 2s dedicacion forwards;
-}
-@keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 85%;}
-}
-
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 50%;}
+    color: #ddd;
 }
 /* SECCION CURRICULUM */
 .curriculum{
@@ -468,9 +378,84 @@ p {
     position: relative;
     bottom: 4px;
 }
+/* Sección Certificaciones */
+.certificaciones{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+/* Centrar el título "Certificaciones" */
+.certificaciones h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Contenedor del slider */
+.certificaciones .slider-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: transparent; /* Elimina cualquier fondo blanco */
+    border-radius: 10px;
+}
+
+/* Slider para las certificaciones */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Cada slide con ajustes adicionales */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo para evitar que se vea borroso */
+    height: auto;
+    object-fit: cover; /* Rellena el contenedor sin distorsión */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    background-color: transparent; /* Asegura que no haya fondo blanco */
+}
+
+/* Información de la certificación */
+.info {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #f8f7f7;
+}
+
+/* Botones de navegación */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
 /* SECCION PORTFOLIO */
 .portfolio{
-    background-color: #252A2E;
+    background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
 }
@@ -531,7 +516,7 @@ p {
 /* SECCION CONTACTO */
 .contacto{
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
+    background-color:  #252A2E;
     color: #fff;
     padding: 50px 0;
 }
@@ -559,7 +544,7 @@ p {
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
+    background-color: #1e2326;
     color: #fff;
     font-size: 18px;
 }
@@ -595,7 +580,7 @@ p {
 .contacto .col .info{
     position: absolute;
     top: 40%;
-    background-color: #252A2E;
+    background-color: #1e2326;
     padding: 20px;
     max-width: 350px;
     left: 50%;
@@ -615,7 +600,7 @@ p {
     margin-right: 20px;
 }
 footer{
-    background-color: #252A2E;
+    background-color: #1e2326;
     color: #fff;
     padding: 50px 0 30px 0;
     text-align: center;
